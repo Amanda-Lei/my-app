@@ -8,11 +8,11 @@ import Contact from './components/Contact.js';
 function App() {
   return (
     <main className='bg-dark'>
-      <NavBar />
-      <Home />
-      <Gallery />
-      <Resume />
-      {/* <Contact /> */}
+      <NavBar/>
+      <Home id="home"/>
+      <Gallery id="gallery"/>
+      <Resume id="resume"/>
+      <Contact id="contact"/>
     </main>
   );
 }

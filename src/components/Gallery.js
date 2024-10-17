@@ -28,7 +28,7 @@ function Gallery() {
   const handleClose = () => setShow(false);
 
   return (
-    <Container className="my-5">
+    <Container id="gallery" className="py-5">
       <h2 className="text-center mb-4" style={{ color: 'white' }}>Learn More About My Experiences!</h2>
       <Row>
         {projects.map((project, index) => (

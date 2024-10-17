@@ -2,10 +2,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.css';
-
+// #4527A0
 function NavBar() {
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top">
+    <Navbar expand="lg" style={{ backgroundColor: 'black' }} data-bs-theme="dark" sticky="top">
       <Container>
         <Navbar.Brand href="#home">Amanda Lei</Navbar.Brand>
         <Navbar.Toggle/>
