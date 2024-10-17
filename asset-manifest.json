@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.284706bd.css",
-    "main.js": "/react-gh-pages/static/js/main.52ca114d.js",
-    "static/js/453.ed3810f9.chunk.js": "/react-gh-pages/static/js/453.ed3810f9.chunk.js",
-    "static/media/pfp.JPG": "/react-gh-pages/static/media/pfp.c23d3298aedbf19d22e3.JPG",
-    "static/media/Lei_Amanda_Resume.pdf": "/react-gh-pages/static/media/Lei_Amanda_Resume.49b4d45fab05cbc3fe4b.pdf",
-    "index.html": "/react-gh-pages/index.html",
-    "main.284706bd.css.map": "/react-gh-pages/static/css/main.284706bd.css.map",
-    "main.52ca114d.js.map": "/react-gh-pages/static/js/main.52ca114d.js.map",
-    "453.ed3810f9.chunk.js.map": "/react-gh-pages/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/my-app/static/css/main.284706bd.css",
+    "main.js": "/my-app/static/js/main.5b05c802.js",
+    "static/js/453.ed3810f9.chunk.js": "/my-app/static/js/453.ed3810f9.chunk.js",
+    "static/media/pfp.JPG": "/my-app/static/media/pfp.c23d3298aedbf19d22e3.JPG",
+    "static/media/Lei_Amanda_Resume.pdf": "/my-app/static/media/Lei_Amanda_Resume.49b4d45fab05cbc3fe4b.pdf",
+    "index.html": "/my-app/index.html",
+    "main.284706bd.css.map": "/my-app/static/css/main.284706bd.css.map",
+    "main.5b05c802.js.map": "/my-app/static/js/main.5b05c802.js.map",
+    "453.ed3810f9.chunk.js.map": "/my-app/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.284706bd.css",
-    "static/js/main.52ca114d.js"
+    "static/js/main.5b05c802.js"
   ]
 }
