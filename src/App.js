@@ -7,11 +7,11 @@ import Contact from './components/Contact.js';
 
 function App() {
   return (
-    <main>
+    <main className='bg-dark'>
       <NavBar />
       <Home />
-      {/* <Gallery />
-      <Resume />
+      <Gallery />
+      {/* <Resume />
       <Contact /> */}
     </main>
   );
