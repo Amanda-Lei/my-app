@@ -7,28 +7,31 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import p1 from '../images/pfizer/pfizer1.jpeg'
-import p2 from '../images/pfizer/pfizer2.jpeg'
-import p3 from '../images/pfizer/pfizer3.jpeg'
+// dynamic image import
+const pfizerImages = require.context('../images/pfizer', true);
+
+const images = {
+  pfizer: pfizerImages.keys().map((image) => pfizerImages(image)),
+};
 
 const primaryExperiences = [
   {
     title: 'Pharmacovigilance Intern @ Pfizer',
     date: 'June 2024 - August 2024',
     description: 'Designed and built a Python-based application...',
-    images: [p1, p2, p3],
+    images: images.pfizer,
   },
   {
     title: 'Learning Assistant @ Rutgers University',
     date: 'January 2023 - Present',
     description: 'Facilitated workshops and supported student learning...',
-    images: [p1, p2, p3],
+    images: images.pfizer,
   },
   {
     title: 'Marketing Director @ HackRU',
     date: 'September 2022 - Present',
     description: 'Managed social media campaigns and increased engagement...',
-    images: [p1, p2, p3],
+    images: images.pfizer,
   },
 ];
 
@@ -36,12 +39,12 @@ const secondaryExperiences = [
   {
     title: 'Creative Outlet',
     description: "I enjoy drawing occasionally, here are some pieces that I am the most proud of...",
-    images: [p1, p2, p3],
+    images: images.pfizer,
   },
   {
     title: 'Creative Outlet',
     description: "I enjoy drawing occasionally, here are some pieces that I am the most proud of...",
-    images: [p1, p2, p3],
+    images: images.pfizer,
   },
 ];
 
@@ -58,12 +61,12 @@ function Experience() {
 
   return (
     <section>
-      <Container fluid className="experience py-5">
+      <Container fluid id="experience" className="py-5">
         <h2 className="text-center mb-5">My Experiences</h2>
         
         {/* Primary Experiences */}
         {primaryExperiences.map((exp, index) => (
-          <Row key={index} className="align-items-center mb-5">
+          <Row key={index} className="align-items-center mb-5 p-2">
             <Col className='colImgBorder' md={6} style={{ order: index % 2 === 0 ? 1 : 2 }}>
               <Carousel>
                 {exp.images.map((img, idx) => (

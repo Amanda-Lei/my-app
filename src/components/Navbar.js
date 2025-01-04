@@ -13,7 +13,7 @@ function NavBar() {
         <Navbar.Collapse>
           <Nav className="ms-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#gallery">Gallery</Nav.Link>
+            <Nav.Link href="#experience">Experiences</Nav.Link>
             <Nav.Link href="#resume">Resume</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>

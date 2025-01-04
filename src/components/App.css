@@ -32,12 +32,6 @@ Nav {
   animation: fade-in 1s;
 }
 
-#pfp:hover {
-  transform: scale(1.08);
-  transition: transform 0.3s;
-  border-width: 8px;
-}
-
 #home {
   background-image: linear-gradient(135deg, var(--blu) 0%, var(--red) 100%);
   color: white;
@@ -47,17 +41,37 @@ Nav {
   border: black;
   border-style: solid;
   border-width: 3px;
+  transition: transform 0.3s, border-width 0.3s;
+}
+
+#pfp:hover {
+  transform: scale(1.08);
+  border-width: 8px;
 }
 
 /* EXPERIENCE */
 
-.experience {
-  background: #EFE9E7;
+#experience {
+  /* background: #EFE9E7; */
+  background: #ebe4e4;
+}
+
+.carousel-item img {
+  transition: transform 0.3s;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1);
+}
+
+.experience .row {
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .colImgBorder {
   background-color: black;
-  padding: 8px;
+  padding: 6px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -70,7 +84,10 @@ Nav {
   color: white;
 }
 
+.secExp .row > .colImgBorder {
+  margin: 0 10px 20px;
+}
+
 button:hover {
   transform: scale(1.05);
 }
-
