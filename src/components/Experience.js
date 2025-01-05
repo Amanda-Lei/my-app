@@ -26,39 +26,39 @@ const images = {
 
 const primaryExperiences = [
   {
-    title: 'Pharmacovigilance Intern @ Pfizer',
-    date: 'June 2024 - August 2024',
-    description: "I developed an application to help teams improve their resource management, automating over 150 emails and saving more than 80 hours of administrative effort. My contributions extended to creating web portals and Power Automate flows for executive leadership, alongside producing instructional videos on how to maintain all of my creations. Collaborating with cross-functional global teams, I also designed and built a Python-based application using Streamlit and Google DLP services to automate the redaction of personally identifiable information, significantly enhancing operational efficiency. ",
+    title: 'App Developer @ Pfizer',
+    date: 'June 2024 - November 2024',
+    description: "During my time as a Pharmacovigilance Summer Intern at Pfizer, I collaborated with Digital and Worldwide Medical teams to develop impactful applications. One of these applications streamlined resource management by automating over 150 emails and saving more than 80 hours of administrative effort. Additionally, I created web portals and Power Automate flows for executive leadership, producing instructional videos to ensure the seamless maintenance of my solutions. Working with cross-functional global teams, I also designed and developed a Python-based application using Streamlit and Google DLP services to automate the redaction of personally identifiable information, significantly improving operational efficiency.",
     images: images.pfizer,
   },
   {
     title: 'Marketing Director @ HackRU',
-    date: 'September 2022 - Present',
+    date: 'July 2024 - Present',
     description: "HackRU is Rutgers University's largest biannual hackathon. By strategically planning and analyzing content performance, I boosted engagement by approximately 50% in a single semester! Additionally, I support hackers during events by troubleshooting coding challenges across various programming languages. We hope to aim a seamless and rewarding experience for over 500 participants.",
     images: images.hackru,
   },
   {
     title: 'Learning Assistant @ Rutgers University',
-    date: 'January 2023 - Present',
-    description: "I am entering my fourth semester working as an LA. In this role, I lead recitation sessions for the Introduction to Computer Science class, teaching fundamental topics such as algorithmic thinking, searching/sorting algorithms, recursion, and Java programming. Drawing on pedagogical best practices, I create adaptable lesson plans and materials, ensuring students are supported in building their foundational programming skills.",
+    date: 'July 2023 - Present',
+    description: "I am currently in my fourth semester as a Learning Assistant for Rutgers University's Introduction to Computer Science class. In this role, I lead recitation sessions, teaching essential topics such as algorithmic thinking, searching/sorting algorithms, recursion, and Java programming. Leveraging pedagogical best practices, I develop adaptable lesson plans and materials to support students in building strong foundational programming skills.",
     images: images.rutgers,
   },
 ];
 
 const secondaryExperiences = [
   {
-    title: 'Creative Outlet',
-    description: "I enjoy drawing occasionally, here are some pieces that I am the most proud of...",
+    title: 'Art',
+    description: "Art has always been a nice, chill creative outlet for me. I am most comfortable with pencil and paper and have only recently begun to experiment with digital. Here, you can see two drawings I have done emulating myself. One is of my very own Spidersona, inspired by the Spider-Verse movies and the idea that anyone can wear the mask. My Spidersona reflects my love for pandas (my sister’s nickname for me) and my favorite colors—red and black. What would your Spidersona look like?",
     images: images.art,
   },
   {
-    title: 'Creative Outlet',
-    description: "I enjoy drawing occasionally, here are some pieces that I am the most proud of...",
+    title: 'Gaming',
+    description: "Gaming has been a significant part of my life, from casual fun to competitive eSports. I was part of Rutgers’ Scarlet Knights Rose competitive Valorant team, where I honed skills like teamwork, coordination, and maintaining composure under pressure. Currently ranked Ascendant (top 5% of players), I’ve learned that gaming isn’t just about winning—it’s about collaboration and developing a resilient mindset. While I play much less now, I still enjoy the camaraderie and strategic thinking that gaming offers. What is your favorite part of gaming?",
     images: images.game,
   },
   {
-    title: 'Creative Outlet',
-    description: "I enjoy drawing occasionally, here are some pieces that I am the most proud of...",
+    title: 'Music',
+    description: "Music is a constant presence in my life, setting the tone for whatever I’m doing—studying, cleaning, walking to class, or just relaxing. I love how music connects people, and I enjoy sharing that connection by attending concerts with friends. In 2024 alone, I attended eight concerts and festivals, seeing incredible artists like Journey, Def Leppard, William Black, P1Harmony, and DPR Ian. Each performance was unique and unforgettable. What was your most recent concert?",
     images: images.music,
   },
 ];
@@ -99,8 +99,8 @@ function Experience() {
           </Row>
         ))}
 
-        {/* Secondary Experiences
-        <div className="secExp bg-dark mt-5" style={{ padding: '20px', borderRadius: '8px' }}>
+        {/* Secondary Experiences */}
+        <div className="secExp bg-dark mt-5 container-fluid" style={{ padding: '20px', borderRadius: '8px' }}>
           <h3 id="secHeader" className="text-center mb-4">My Hobbies</h3>
           <Row>
             {secondaryExperiences.map((exp, index) => (
@@ -108,20 +108,20 @@ function Experience() {
                 <Carousel>
                   {exp.images.map((img, idx) => (
                     <Carousel.Item key={idx}>
-                      <img src={img} alt={`${exp.title} ${idx + 1}`} className="d-block w-100" style={{ aspectRatio: '4/5', objectFit: 'cover', borderRadius: '8px' }} />
+                      <img src={img} alt={`${exp.title} ${idx + 1}`} className="d-block w-100" style={{ aspectRatio: '1/1', objectFit: 'cover', borderRadius: '8px' }} />
                     </Carousel.Item>
                   ))}
                 </Carousel>
-                <Button variant="dark" className="mt-2 w-100" onClick={() => handleShow(exp)} style={{ background: '#002650' }}>Learn More</Button>
+                <Button variant="dark" className="mt-2 w-100" onClick={() => handleShow(exp)} style={{ background: '#002650' }}>View Details</Button>
               </Col>
             ))}
           </Row>
-        </div> */}
+        </div>
       </Container>
 
       {/* Modal */}
       {currentExperience && (
-        <Modal show={showModal} onHide={handleClose} centered>
+        <Modal show={showModal} onHide={handleClose} centered className='descripModal' size='lg'>
           <Modal.Header closeButton>
             <Modal.Title>{currentExperience.title}</Modal.Title>
           </Modal.Header>

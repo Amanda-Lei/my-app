@@ -18,7 +18,9 @@ function Home() {
                     <Col md={6}>
                         <h1>I'm Amanda, nice to meet you :)</h1>
                         <br></br>
-                        <p>I am pursuing degrees in Computer Science, Human Resource Management, and Mathematics at Rutgers University-New Brunswick. This website is developed using React and React Bootstrap. Check out the previous version (designed with HTML and CSS) at <a href="https://amanda-lei.github.io/MyWebsite/index.html" target="_blank" rel="noreferrer">MyWebsite</a>.</p>
+                        <p>I'm a third-year Computer Science and Human Resources double major (and Mathematics minor) at Rutgers University with a passion for technology and people. I thrive in environments that challenge me to think creatively and adapt quickly. Welcome to my website, where you can explore my journey!</p>
+                        
+                        <p>This website is developed using React. Check out the previous version (designed with HTML and CSS) at <a href="https://amanda-lei.github.io/MyWebsite/index.html" target="_blank" rel="noreferrer">MyWebsite</a>.</p>
                     </Col>
                     <Col md={1}></Col>
                 </Row>

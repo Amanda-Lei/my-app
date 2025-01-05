@@ -52,7 +52,6 @@ Nav {
 /* EXPERIENCE */
 
 #experience {
-  /* background: #EFE9E7; */
   background: #ebe4e4;
 }
 
@@ -84,10 +83,43 @@ Nav {
   color: white;
 }
 
-.secExp .row > .colImgBorder {
-  margin: 0 10px 20px;
+.descripModal .modal-header {
+  background-color: var(--blu);
+  color: white;
+  padding: 1.5rem;
 }
 
-button:hover {
+.descripModal .modal-header {
+  background-color: var(--blu);
+  color: white;
+  padding: 1.5rem;
+}
+
+.descripModal .modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.descripModal .modal-body {
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.descripModal .modal-footer {
+  background-color: var(--blu);
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.descripModal button {
+  background-color: var(--red);
+  border: none;
+  padding: 0.5rem 1.5rem;
+}
+
+
+.descripModal button:hover {
   transform: scale(1.05);
+  background-color: #880900;
 }
