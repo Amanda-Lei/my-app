@@ -24,12 +24,12 @@ Nav {
 
 /* HOME */
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(5rem); }
+  from { opacity: 0; transform: translateY(3.5rem); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .intro {
-  animation: fade-in 1s;
+  animation: fade-in 2s;
 }
 
 #home {
@@ -83,6 +83,11 @@ Nav {
   color: white;
 }
 
+.secExp button {
+  background-color: var(--blu);
+}
+
+/* MODAL */
 .descripModal .modal-header {
   background-color: var(--blu);
   color: white;
@@ -118,8 +123,14 @@ Nav {
   padding: 0.5rem 1.5rem;
 }
 
-
 .descripModal button:hover {
   transform: scale(1.05);
   background-color: #880900;
+}
+
+.descripModal .expQuestion {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--blu);
 }

@@ -48,18 +48,27 @@ const primaryExperiences = [
 const secondaryExperiences = [
   {
     title: 'Art',
-    description: "Art has always been a nice, chill creative outlet for me. I am most comfortable with pencil and paper and have only recently begun to experiment with digital. Here, you can see two drawings I have done emulating myself. One is of my very own Spidersona, inspired by the Spider-Verse movies and the idea that anyone can wear the mask. My Spidersona reflects my love for pandas (my sister’s nickname for me) and my favorite colors—red and black. What would your Spidersona look like?",
     images: images.art,
+    description: "Art has always been a relaxing and enjoyable creative outlet for me. I’m most comfortable with pencil and paper, though I’ve only recently started experimenting with digital art. Below are two drawings I've created that reflect aspects of myself. One is of my very own Spidersona, inspired by the Spider-Verse movies and the idea that anyone can wear the mask. My Spidersona reflects my love for pandas (inspired by my sister's nickname for me) and my favorite colors, red and black.",
+    question: "What would your Spidersona look like?",
+    emailSubj: "My Spidersona Answer",
+    emailDraft: "My spidersona would look like... ",
   },
   {
     title: 'Gaming',
-    description: "Gaming has been a significant part of my life, from casual fun to competitive eSports. I was part of Rutgers’ Scarlet Knights Rose competitive Valorant team, where I honed skills like teamwork, coordination, and maintaining composure under pressure. Currently ranked Ascendant (top 5% of players), I’ve learned that gaming isn’t just about winning—it’s about collaboration and developing a resilient mindset. While I play much less now, I still enjoy the camaraderie and strategic thinking that gaming offers. What is your favorite part of gaming?",
     images: images.game,
+    description: "Gaming started as a hobby, but my quick learning pushed my skills to a competitive level, leading me to temporarily join Rutgers’ Scarlet Knights Rose Valorant team. With them, I practiced teamwork, coordination, and maintaining composure under pressure. Currently ranked Ascendant (top 5% of players), I’ve learned that gaming isn’t just about winning—it’s about collaboration and developing a resilient mindset. While I play much less now, I still enjoy the camaraderie and strategic thinking that gaming offers.",
+    question: "What is your favorite part of gaming?",
+    emailSubj: "My Gaming Answer",
+    emailDraft: "My favorite part of gaming is... ",
   },
   {
     title: 'Music',
-    description: "Music is a constant presence in my life, setting the tone for whatever I’m doing—studying, cleaning, walking to class, or just relaxing. I love how music connects people, and I enjoy sharing that connection by attending concerts with friends. In 2024 alone, I attended eight concerts and festivals, seeing incredible artists like Journey, Def Leppard, William Black, P1Harmony, and DPR Ian. Each performance was unique and unforgettable. What was your most recent concert?",
     images: images.music,
+    description: "Music is a constant presence in my life, setting the tone for whatever I’m doing—studying, cleaning, walking to class, or just relaxing. I love how music connects people, and I enjoy sharing that connection by attending concerts with friends. In 2024 alone, I attended eight concerts and festivals, seeing incredible artists like William Black, P1Harmony, Journey, Def Leppard, and DPR Ian. Each performance was unique and unforgettable.",
+    question: "What was your most recent concert?",
+    emailSubj: "My Concert Answer",
+    emailDraft: "My most recent concert was... ",
   },
 ];
 
@@ -112,7 +121,7 @@ function Experience() {
                     </Carousel.Item>
                   ))}
                 </Carousel>
-                <Button variant="dark" className="mt-2 w-100" onClick={() => handleShow(exp)} style={{ background: '#002650' }}>View Details</Button>
+                <Button variant="dark" className="mt-2 w-100" onClick={() => handleShow(exp)} >View Details</Button>
               </Col>
             ))}
           </Row>
@@ -127,11 +136,14 @@ function Experience() {
           </Modal.Header>
           <Modal.Body>
             <p>{currentExperience.description}</p>
+            <p className='expQuestion'>{currentExperience.question}</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
+          <Button
+            onClick={() => {
+              window.location.href = `mailto:amandaylei@gmail.com?subject=${currentExperience.emailSubj}&body=${currentExperience.emailDraft}`;
+            }}
+          >Let Me Know Your Answer!</Button>
           </Modal.Footer>
         </Modal>
       )}
