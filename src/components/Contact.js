@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Contact() {
   return (
-    <section id="contact" className="py-5" style={{ backgroundColor: 'white', display: 'flex' }}>
+    <section id="contact">
       <Container className="text-center">
         <h2 className="mb-4">Contact Me</h2>
         <Row className="justify-content-center">

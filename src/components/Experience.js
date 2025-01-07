@@ -24,7 +24,7 @@ const images = {
   music: musicImages.keys().map((image) => musicImages(image)),
 };
 
-const primaryExperiences = [
+const experiences = [
   {
     title: 'App Developer @ Pfizer',
     date: 'June 2024 - November 2024',
@@ -34,7 +34,7 @@ const primaryExperiences = [
   {
     title: 'Marketing Director @ HackRU',
     date: 'July 2024 - Present',
-    description: "HackRU is Rutgers University's largest biannual hackathon. By strategically planning and analyzing content performance, I boosted engagement by approximately 50% in a single semester! Additionally, I support hackers during events by troubleshooting coding challenges across various programming languages. We hope to aim a seamless and rewarding experience for over 500 participants.",
+    description: "HackRU is Rutgers University's largest biannual hackathon. By strategically planning and analyzing content performance, I boosted engagement by approximately 50% in a single semester! Additionally, I support hackers during events by troubleshooting coding challenges across various programming languages. We hope to give a seamless and rewarding experience for over 500 participants.",
     images: images.hackru,
   },
   {
@@ -45,11 +45,11 @@ const primaryExperiences = [
   },
 ];
 
-const secondaryExperiences = [
+const hobbies = [
   {
     title: 'Art',
     images: images.art,
-    description: "Art has always been a relaxing and enjoyable creative outlet for me. I’m most comfortable with pencil and paper, though I’ve only recently started experimenting with digital art. Below are two drawings I've created that reflect aspects of myself. One is of my very own Spidersona, inspired by the Spider-Verse movies and the idea that anyone can wear the mask. My Spidersona reflects my love for pandas (inspired by my sister's nickname for me) and my favorite colors, red and black.",
+    description: "Art has always been a relaxing and enjoyable creative outlet for me. I’m most comfortable with pencil and paper, though I’ve only recently started experimenting with digital art. The first image shows my very own Spidersona, inspired by the Spider-Verse movies and the idea that anyone can wear the mask. My Spidersona reflects my love for pandas (inspired by my sister's nickname for me) and my favorite colors, red and black.",
     question: "What would your Spidersona look like?",
     emailSubj: "My Spidersona Answer",
     emailDraft: "My spidersona would look like... ",
@@ -72,6 +72,28 @@ const secondaryExperiences = [
   },
 ];
 
+// utils/importImages.js
+export const importAll = (requireContext) => {
+  let images = {};
+  requireContext.keys().forEach((item) => {
+    images[item.replace('./', '')] = requireContext(item);
+  });
+  return images;
+};
+
+const history = [
+  {
+    title: 'Techshare Project',
+    description: "I love teaching. In highschool, I was CMO of a non-profit organization that introduced underprivileged kids to technology. This picture is from one of our trips to the Boys and Girls Club of Newark!",
+    image: require('../images/history/newark.JPG'),
+  },
+  {
+    title: 'Robotics',
+    description: "I’ve been passionate about computer science since 4th grade, when I was first introduced to robotics. My team competed at levels ranging from regional to global, earning numerous awards along the way. This picture is from when we won the Design Award at the VEX IQ New Jersey State Competition!",
+    image: require('../images/history/design.jpg'),
+  },
+]
+
 function Experience() {
   const [showModal, setShowModal] = React.useState(false);
   const [currentExperience, setCurrentExperience] = React.useState(null);
@@ -85,34 +107,52 @@ function Experience() {
 
   return (
     <section>
-      <Container fluid id="experience" className="py-5">
-        <h2 className="text-center mb-5">My Experiences</h2>
+      <Container fluid className="expPage py-5 px-0">
         
-        {/* Primary Experiences */}
-        {primaryExperiences.map((exp, index) => (
-          <Row key={index} className="align-items-center mb-5 p-2">
-            <Col className='colImgBorder' md={6} style={{ order: index % 2 === 0 ? 1 : 2 }}>
-              <Carousel>
-                {exp.images.map((img, idx) => (
-                  <Carousel.Item key={idx}>
-                    <img src={img} alt={`${exp.title} ${idx + 1}`} className="d-block w-100" style={{ aspectRatio: '3/2', objectFit: 'cover', borderRadius: '8px' }}/>
-                  </Carousel.Item>
-                ))}
-              </Carousel>
-            </Col>
-            <Col md={6} style={{ order: index % 2 === 0 ? 2 : 1 }}>
-              <h3 className='primHeader'>{exp.title}</h3>
-              <small>{exp.date}</small>
-              <p className="mt-3">{exp.description}</p>
-            </Col>
-          </Row>
-        ))}
+        {/* Experiences */}
+        <div class="experience">
+          <h2 className="text-center mb-5">My Experiences</h2>
+          {experiences.map((exp, index) => (
+            <Row key={index} className="align-items-center mb-5 p-4">
+              <Col className='colImgBorder' md={6} style={{ order: index % 2 === 0 ? 1 : 2 }}>
+                <Carousel>
+                  {exp.images.map((img, idx) => (
+                    <Carousel.Item key={idx}>
+                      <img src={img} alt={`${exp.title} ${idx + 1}`} className="d-block w-100" style={{ aspectRatio: '3/2', objectFit: 'cover', borderRadius: '8px' }}/>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </Col>
+              <Col className='px-4' md={6} style={{ order: index % 2 === 0 ? 2 : 1 }}>
+                <h3 className='primHeader'>{exp.title}</h3>
+                <small>{exp.date}</small>
+                <p className="mt-3">{exp.description}</p>
+              </Col>
+            </Row>
+          ))}
+        </div>
 
-        {/* Secondary Experiences */}
-        <div className="secExp bg-dark mt-5 container-fluid" style={{ padding: '20px', borderRadius: '8px' }}>
-          <h3 id="secHeader" className="text-center mb-4">My Hobbies</h3>
+        {/* History Section */}
+        <div className="history">
+          <Carousel data-bs-theme="dark">
+            {history.map((exp, index) => (
+              <Carousel.Item key={index}>
+                <div className="historyCarouselItem" style={{ backgroundImage: `url(${exp.image})` }}>
+                  <Carousel.Caption className="historyCaption" style={{ color: 'white' }}>
+                    <h2>{exp.title}</h2>
+                    <p>{exp.description}</p>
+                  </Carousel.Caption>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+
+        {/* Hobbies */}
+        <div className="hobbies bg-dark">
+          <h3 id="hobHeader" className="text-center mb-4">My Hobbies</h3>
           <Row>
-            {secondaryExperiences.map((exp, index) => (
+            {hobbies.map((exp, index) => (
               <Col key={index} md={4} className="colImgBorder mb-4">
                 <Carousel>
                   {exp.images.map((img, idx) => (

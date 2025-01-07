@@ -51,7 +51,7 @@ Nav {
 
 /* EXPERIENCE */
 
-#experience {
+.expPage {
   background: #ebe4e4;
 }
 
@@ -79,11 +79,17 @@ Nav {
   color: var(--red);
 }
 
-#secHeader {
+.hobbies {
+  padding: 2rem;
+  border-radius: 5rem;
+  margin: 3rem 2rem 0rem;
+}
+
+#hobHeader {
   color: white;
 }
 
-.secExp button {
+.hobbies button {
   background-color: var(--blu);
 }
 
@@ -133,4 +139,45 @@ Nav {
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--blu);
+}
+
+/* HISTORY SECTION */
+.historyCarouselItem {
+  position: relative;
+  height: 40rem;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.historyCaption {
+  /* color: white; */
+  text-align: center;
+  background-color: rgba(44, 44, 44, 0.416);
+  transition: background 0.5s;
+  padding: 0.5rem;
+}
+
+.historyCaption:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.historyCaption h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.historyCaption p {
+  font-size: 18px;
+}
+
+/* CONTACT */
+
+#contact {
+  background-image: linear-gradient(45deg, var(--red) 0%, var(--blu) 100%);
+  color: white;
+  padding: 5rem;
 }
