@@ -6,6 +6,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.css';
+import ReactMarkdown from 'react-markdown';
 
 // dynamic image import
 const pfizerImages = require.context('../images/pfizer', true);
@@ -28,19 +29,19 @@ const experiences = [
   {
     title: 'App Developer @ Pfizer',
     date: 'June 2024 - November 2024',
-    description: "During my time as a Pharmacovigilance Summer Intern at Pfizer, I collaborated with Digital and Worldwide Medical teams to develop impactful applications. One of these applications streamlined resource management by automating over 150 emails and saving more than 80 hours of administrative effort. Additionally, I created web portals and Power Automate flows for executive leadership, producing instructional videos to ensure the seamless maintenance of my solutions. Working with cross-functional global teams, I also designed and developed a Python-based application using Streamlit and Google DLP services to automate the redaction of personally identifiable information, significantly improving operational efficiency.",
+    description: "As a Pharmacovigilance Summer Intern at Pfizer, I developed applications tailored to the needs of global teams. I streamlined resource management by **automating over 150 emails, saving 80+ hours** of administrative work. I also designed and developed a **Python**-based application using **Streamlit** and **Google DLP** services to automate the redaction of personally identifiable information, significantly improving operational efficiency.",
     images: images.pfizer,
   },
   {
     title: 'Marketing Director @ HackRU',
     date: 'July 2024 - Present',
-    description: "HackRU is Rutgers University's largest biannual hackathon. By strategically planning and analyzing content performance, I boosted engagement by approximately 50% in a single semester! Additionally, I support hackers during events by troubleshooting coding challenges across various programming languages. We hope to give a seamless and rewarding experience for over 500 participants.",
+    description: "HackRU is Rutgers University's **largest biannual hackathon**. By strategically planning and analyzing content performance, I **boosted engagement by ~50% in a single semester**! Additionally, I support hackers during events by troubleshooting coding challenges across various programming languages. We hope to give a seamless and rewarding experience for **over 500 participants**.",
     images: images.hackru,
   },
   {
     title: 'Learning Assistant @ Rutgers University',
     date: 'July 2023 - Present',
-    description: "I am currently in my fourth semester as a Learning Assistant for Rutgers University's Introduction to Computer Science class. In this role, I lead recitation sessions, teaching essential topics such as algorithmic thinking, searching/sorting algorithms, recursion, and Java programming. Leveraging pedagogical best practices, I develop adaptable lesson plans and materials to support students in building strong foundational programming skills.",
+    description: "I am currently in my fourth semester as a Learning Assistant for Rutgers University's **Introduction to Computer Science** class. In this role, I **lead recitation sessions**, teaching essential topics such as algorithmic thinking, searching/sorting algorithms, recursion, and **Java programming**. Leveraging pedagogical best practices, I develop adaptable lesson plans and materials to support students in building strong foundational programming skills.",
     images: images.rutgers,
   },
 ];
@@ -70,9 +71,11 @@ const hobbies = [
     emailSubj: "My Concert Answer",
     emailDraft: "My most recent concert was... ",
   },
+  // clothing, tennis, fencing, traveling
+  // tennis: https://medium.com/@nacomm/the-making-of-champions-356b6fa53054
 ];
 
-// utils/importImages.js
+// import history images
 export const importAll = (requireContext) => {
   let images = {};
   requireContext.keys().forEach((item) => {
@@ -83,14 +86,24 @@ export const importAll = (requireContext) => {
 
 const history = [
   {
-    title: 'Techshare Project',
-    description: "I love teaching. In highschool, I was CMO of a non-profit organization that introduced underprivileged kids to technology. This picture is from one of our trips to the Boys and Girls Club of Newark!",
-    image: require('../images/history/newark.JPG'),
+    title: 'Where It All Began',
+    description: "I’ve been passionate about computer science since 4th grade, when I first discovered robotics. Making a machine come to life sparked a love for technology that’s only grown stronger ever since.",
+    image: require('../images/history/early.jpeg'),
   },
   {
-    title: 'Robotics',
-    description: "I’ve been passionate about computer science since 4th grade, when I was first introduced to robotics. My team competed at levels ranging from regional to global, earning numerous awards along the way. This picture is from when we won the Design Award at the VEX IQ New Jersey State Competition!",
+    title: 'Award Winning Team',
+    description: "My team competed regionally and globally, earning numerous awards along the way. This picture is from when we won the Design Award at the VEX IQ New Jersey State Competition! [Read about it here](https://www.newjerseyhills.com/echoes-sentinel/news/long-hill-community-comes-together-for-robotics-tournament/article_ae11548b-d52e-5d9f-926c-20aa5e2e614f.html)",
     image: require('../images/history/design.jpg'),
+  },
+  {
+    title: 'World Champions',
+    description: "That's me on the big screen in front of the whole world! Representing New Jersey, my team traveled to Louisville, KY for the 2017 VEX IQ World Competition. [Read about it here](https://www.newjerseyhills.com/echoes-sentinel/news/long-hill-celebrates-world-beating-robotics-team-video/article_6dd4786f-175e-55df-8f3b-ce8e05d05f80.html) or [here](https://www.newjerseyhills.com/echoes-sentinel/news/long-hill-brings-home-four-awards-from-world-s-largest-robotics-competition/article_c8632d03-9085-5a9b-a984-ea484f31780a.html)",
+    image: require('../images/history/worlds.jpeg'),
+  },
+  {
+    title: 'Passing It On',
+    description: "In highschool, I was CMO of Techshare Project, a non-profit organization working to introduce underprivileged kids to technology. This picture is from one of my first volunteer trips at the Boys and Girls Club of Newark! [Learn more here](https://www.techshareproject.org/)",
+    image: require('../images/history/newark.JPG'),
   },
 ]
 
@@ -107,7 +120,7 @@ function Experience() {
 
   return (
     <section>
-      <Container fluid className="expPage py-5 px-0">
+      <Container fluid id='experience' className="expPage py-5 px-0">
         
         {/* Experiences */}
         <div class="experience">
@@ -126,7 +139,7 @@ function Experience() {
               <Col className='px-4' md={6} style={{ order: index % 2 === 0 ? 2 : 1 }}>
                 <h3 className='primHeader'>{exp.title}</h3>
                 <small>{exp.date}</small>
-                <p className="mt-3">{exp.description}</p>
+                <ReactMarkdown className="mt-3">{exp.description}</ReactMarkdown>
               </Col>
             </Row>
           ))}
@@ -134,13 +147,13 @@ function Experience() {
 
         {/* History Section */}
         <div className="history">
-          <Carousel data-bs-theme="dark">
+          <Carousel fade interval={null}>
             {history.map((exp, index) => (
               <Carousel.Item key={index}>
                 <div className="historyCarouselItem" style={{ backgroundImage: `url(${exp.image})` }}>
                   <Carousel.Caption className="historyCaption" style={{ color: 'white' }}>
                     <h2>{exp.title}</h2>
-                    <p>{exp.description}</p>
+                    <ReactMarkdown>{exp.description}</ReactMarkdown>
                   </Carousel.Caption>
                 </div>
               </Carousel.Item>
@@ -175,8 +188,8 @@ function Experience() {
             <Modal.Title>{currentExperience.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>{currentExperience.description}</p>
-            <p className='expQuestion'>{currentExperience.question}</p>
+            <ReactMarkdown>{currentExperience.description}</ReactMarkdown>
+            <ReactMarkdown className='expQuestion'>{currentExperience.question}</ReactMarkdown>
           </Modal.Body>
           <Modal.Footer>
           <Button

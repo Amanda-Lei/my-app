@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './components/Navbar.js';
 import Home from './components/Home.js';
 import Experience from './components/Experience.js';

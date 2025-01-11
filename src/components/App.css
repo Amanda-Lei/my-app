@@ -8,10 +8,21 @@ html {
   scroll-behavior: smooth;
 }
 
+p, small, button {
+  font-family:'Verdana';
+  
+}
+
+h1, h2, h3 {
+  /* font-weight: 900; */
+  font-family: 'Montserrat Alternates';
+}
+
 /* NAVBAR */
 
 Nav {
   font-weight: bold;
+  font-family: 'Montserrat Alternates';
 }
 
 #nav {
@@ -23,6 +34,7 @@ Nav {
 }
 
 /* HOME */
+
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(3.5rem); }
   to { opacity: 1; transform: translateY(0); }
@@ -54,6 +66,10 @@ Nav {
 .expPage {
   background: #ebe4e4;
 }
+
+/* .expPage strong {
+  color: var(--blu);
+} */
 
 .carousel-item img {
   transition: transform 0.3s;
@@ -142,6 +158,11 @@ Nav {
 }
 
 /* HISTORY SECTION */
+.history {
+  border: double var(--red);
+  border-width: 2rem 0;
+}
+
 .historyCarouselItem {
   position: relative;
   height: 40rem;
@@ -156,13 +177,14 @@ Nav {
 .historyCaption {
   /* color: white; */
   text-align: center;
-  background-color: rgba(44, 44, 44, 0.416);
+  background-color: rgba(0, 38, 80, 0.5);
   transition: background 0.5s;
-  padding: 0.5rem;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
 .historyCaption:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--blu);
 }
 
 .historyCaption h2 {

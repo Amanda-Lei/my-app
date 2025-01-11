@@ -1,10 +1,10 @@
-import './App.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import pfp from '../images/pfp.JPG'
 import 'bootstrap/dist/css/bootstrap.css';
+import ReactMarkdown from 'react-markdown';
 
 function Home() {
     return (
@@ -16,11 +16,11 @@ function Home() {
                         <Image id="pfp" src={pfp} roundedCircle fluid alt="Amanda's profile picture" style={{ width: '300px', height: '350px', objectFit: 'cover' }}/>
                     </Col>
                     <Col md={6}>
-                        <h1>I'm Amanda, nice to meet you :)</h1>
+                        <h1>Hello, I'm Amanda :)</h1>
                         <br></br>
-                        <p>I'm a third-year Computer Science and Human Resources double major (and Mathematics minor) at Rutgers University with a passion for technology and people. I thrive in environments that challenge me to think creatively and adapt quickly. Welcome to my website, where you can explore my journey!</p>
-                        
-                        <p>This website is developed using React. Check out the previous version (designed with HTML and CSS) at <a href="https://amanda-lei.github.io/MyWebsite/index.html" target="_blank" rel="noreferrer">MyWebsite</a>.</p>
+                        <ReactMarkdown>I’m a **third-year** student at Rutgers-New Brunswick, double majoring in **Computer Science** and **Human Resource Management**, with a minor in **Mathematics**.</ReactMarkdown>
+                        <ReactMarkdown>I’m passionate about blending technology and human connection, thriving in environments that encourage creative thinking and adaptability. I built this website using **React.js** to help you get to know me better!</ReactMarkdown>
+                        <ReactMarkdown>I’m actively seeking **Summer 2025 internship** opportunities. Feel free to reach out if you’d like to connect. Thanks for visiting!</ReactMarkdown>
                     </Col>
                     <Col md={1}></Col>
                 </Row>
