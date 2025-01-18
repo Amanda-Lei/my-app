@@ -21,7 +21,7 @@ function Contact() {
                 <Github size={40} style={{ marginBottom: '15px' }} />
                 <Card.Title>GitHub</Card.Title>
                 <Card.Text>Explore my projects and code</Card.Text>
-                <Button variant="dark" href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
+                <Button variant="dark" href="https://github.com/Amanda-Lei" target="_blank" rel="noopener noreferrer">
                   Visit GitHub
                 </Button>
               </Card.Body>
@@ -35,7 +35,7 @@ function Contact() {
                 <Linkedin size={40} style={{ color: '#0072b1', marginBottom: '15px' }} />
                 <Card.Title>LinkedIn</Card.Title>
                 <Card.Text>Connect with me on LinkedIn</Card.Text>
-                <Button variant="dark" href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">
+                <Button variant="dark" href="https://www.linkedin.com/in/amanda-lei168/" target="_blank" rel="noopener noreferrer">
                   Visit LinkedIn
                 </Button>
               </Card.Body>
@@ -48,10 +48,15 @@ function Contact() {
               <Card.Body>
                 <Envelope size={40} style={{ color: '#d44638', marginBottom: '15px' }} />
                 <Card.Title>Email</Card.Title>
-                <Card.Text>Email me at amandaylei@gmail.com</Card.Text>
-                <Button variant="dark" href="amandaylei@gmail.com">
+                <Card.Text>Message amandaylei@gmail.com</Card.Text>
+                <Button variant='dark'
+                  onClick={() => {
+                    window.location.href = `mailto:amandaylei@gmail.com`;
+                  }}
+                >Send Email</Button>
+                {/* <Button variant="dark" href="amandaylei@gmail.com">
                   Send Email
-                </Button>
+                </Button> */}
               </Card.Body>
             </Card>
           </Col>

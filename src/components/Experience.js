@@ -35,7 +35,7 @@ const experiences = [
   {
     title: 'Marketing Director @ HackRU',
     date: 'July 2024 - Present',
-    description: "HackRU is Rutgers University's **largest biannual hackathon**. By strategically planning and analyzing content performance, I **boosted engagement by ~50% in a single semester**! Additionally, I support hackers during events by troubleshooting coding challenges across various programming languages. We hope to give a seamless and rewarding experience for **over 500 participants**.",
+    description: "HackRU is Rutgers University's **largest biannual hackathon**. By strategically planning and analyzing content performance, I **boosted engagement by ~50% in a single semester**! Additionally, I support hackers during events by troubleshooting coding challenges across various programming languages. We hope to give a seamless and rewarding experience for **over 500 participants**. [Visit website](https://www.hackru.org/)",
     images: images.hackru,
   },
   {
@@ -50,7 +50,7 @@ const hobbies = [
   {
     title: 'Art',
     images: images.art,
-    description: "Art has always been a relaxing and enjoyable creative outlet for me. I’m most comfortable with pencil and paper, though I’ve only recently started experimenting with digital art. The first image shows my very own Spidersona, inspired by the Spider-Verse movies and the idea that anyone can wear the mask. My Spidersona reflects my love for pandas (inspired by my sister's nickname for me) and my favorite colors, red and black.",
+    description: "Art has always been a relaxing and enjoyable creative outlet for me. I’m most comfortable with pencil and paper, and have recently started experimenting with digital art. The first image shows my very own Spidersona, inspired by the Spider-Verse movies and the idea that anyone can wear the mask. My Spidersona reflects my love for pandas (inspired by my sister's nickname for me) and my favorite colors, red and black.",
     question: "What would your Spidersona look like?",
     emailSubj: "My Spidersona Answer",
     emailDraft: "My spidersona would look like... ",
@@ -102,7 +102,7 @@ const history = [
   },
   {
     title: 'Passing It On',
-    description: "In highschool, I was CMO of Techshare Project, a non-profit organization working to introduce underprivileged kids to technology. This picture is from one of my first volunteer trips at the Boys and Girls Club of Newark! [Learn more here](https://www.techshareproject.org/)",
+    description: "In highschool, I was CMO of Techshare Project, a nonprofit working to introduce underprivileged kids to technology. Here's me volunteering at the Boys and Girls Club of Newark! [Learn more here](https://www.techshareproject.org/)",
     image: require('../images/history/newark.JPG'),
   },
 ]
