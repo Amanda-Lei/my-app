@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.abd86290.css",
+    "main.js": "/my-app/static/js/main.13525263.js",
+    "static/js/453.68693753.chunk.js": "/my-app/static/js/453.68693753.chunk.js",
+    "static/media/1ascbuddy.png": "/my-app/static/media/1ascbuddy.7c972958457e316a8a94.png",
+    "static/media/3candy.jpg": "/my-app/static/media/3candy.da23e8e8fcc0c2ab5521.jpg",
+    "static/media/pfp.JPG": "/my-app/static/media/pfp.c23d3298aedbf19d22e3.JPG",
+    "static/media/4mirror.jpg": "/my-app/static/media/4mirror.97f31d1902d837af874a.jpg",
+    "static/media/newark.JPG": "/my-app/static/media/newark.863a5e5d7ee820aa19a8.JPG",
+    "static/media/1polaroid.png": "/my-app/static/media/1polaroid.5c32c7d552b99773ecae.png",
+    "static/media/insertion.png": "/my-app/static/media/insertion.8d042efe3005c37e12e5.png",
+    "static/media/worlds.jpeg": "/my-app/static/media/worlds.aa998357511d7de674e0.jpeg",
+    "static/media/1view.jpeg": "/my-app/static/media/1view.6de64e4fb132cfd6b0ff.jpeg",
+    "static/media/2apanda.png": "/my-app/static/media/2apanda.b337704b9b13ab1e968c.png",
+    "static/media/3secondplace.png": "/my-app/static/media/3secondplace.e76f66820f8ed26d6455.png",
+    "static/media/4mall.jpeg": "/my-app/static/media/4mall.bf4de83accdf1a82bc53.jpeg",
+    "static/media/early.jpeg": "/my-app/static/media/early.bdbaedccd1ef4df5d6d6.jpeg",
+    "static/media/recursion.png": "/my-app/static/media/recursion.f652892d88447fb5c7f2.png",
+    "static/media/password.png": "/my-app/static/media/password.5418ef888b9fc2924441.png",
+    "static/media/3ezoo.jpg": "/my-app/static/media/3ezoo.de25c4bd292dedcf87b7.jpg",
+    "static/media/2speak.jpg": "/my-app/static/media/2speak.8d2dfc703b82e54daae3.jpg",
+    "static/media/2p1h.jpg": "/my-app/static/media/2p1h.86adca51e7550acc42be.jpg",
+    "static/media/Lei_Amanda_Resume.pdf": "/my-app/static/media/Lei_Amanda_Resume.c8e99410132ca739467a.pdf",
+    "static/media/1breakaway.jpg": "/my-app/static/media/1breakaway.763c551b6c467945e14c.jpg",
+    "static/media/1spiderpanda.jpg": "/my-app/static/media/1spiderpanda.19e0260c048ec01f588c.jpg",
+    "static/media/2squad.png": "/my-app/static/media/2squad.a9d2e06433088996cbb0.png",
+    "static/media/design.jpg": "/my-app/static/media/design.f6800654402efc386c5e.jpg",
+    "static/media/4sax.jpg": "/my-app/static/media/4sax.0bbf8af41c5c6d0a6844.jpg",
+    "static/media/5title.jpeg": "/my-app/static/media/5title.7adf90e5264c5f780151.jpeg",
+    "static/media/2group.jpeg": "/my-app/static/media/2group.9acf2c65b2730ef5ffde.jpeg",
+    "static/media/3duo.jpeg": "/my-app/static/media/3duo.723acd726b7a52198b4f.jpeg",
+    "index.html": "/my-app/index.html",
+    "main.abd86290.css.map": "/my-app/static/css/main.abd86290.css.map",
+    "main.13525263.js.map": "/my-app/static/js/main.13525263.js.map",
+    "453.68693753.chunk.js.map": "/my-app/static/js/453.68693753.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd86290.css",
+    "static/js/main.13525263.js"
+  ]
+}
